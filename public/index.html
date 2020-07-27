@@ -4,27 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="./js/bundle.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
     <title>Document</title>
 </head>
 <body>
     <div id="app">
-        
-        <form v-on:submit.prevent="saveNewTask">
-            <label for="new-task">New Task:</label>
-            <input id="new-task" type="text" v-model="newTask">
+        <h1>To-Do List</h1>
+        <form id="new-task-form" v-on:submit.prevent="saveNewTask">
+            <label class="form-item" for="new-task">New Task:</label>
+            <input class="form-item" id="new-task" type="text" v-model="newTask">
             <p>Priority:</p>
-            <input id="high" name="priority" type="radio" v-model="priority" value="High">
-            <label for="high">High</label>
-            <input id="med" name="priority" type="radio" v-model="priority" value="Med">
-            <label for="med">Medium</label>
-            <input id="low" name="priority" type="radio" v-model="priority" value="Low">
-            <label for="low">Low</label>
-            <input type="submit" value="Add Task">
+            <input class="form-item" id="high" name="priority" type="radio" v-model="priority" value="High">
+            <label class="form-item" for="high">High</label>
+            <input class="form-item" id="med" name="priority" type="radio" v-model="priority" value="Med">
+            <label class="form-item" for="med">Medium</label>
+            <input class="form-item" id="low" name="priority" type="radio" v-model="priority" value="Low">
+            <label class="form-item" for="low">Low</label>
+            <input class="form-item" id="add-task-btn" type="submit" value="Add Task">
         </form>
-        <ul>
+        <ul id="task-list">
+            <h3>Tasks:</h3>
             <li v-for="(task, index) in tasks">
-                <span>{{ task.name }} {{ task.priority }}</span>
-                <button @click="deleteTask(index)">Delete</button>
+                <span id="span-name">{{ task.name }}</span>
+                <span id="span-priority">{{ task.priority }}</span>
+                <button id="delete-task-btn" @click="deleteTask(index)">Delete</button>
             </li>
         </ul>
 

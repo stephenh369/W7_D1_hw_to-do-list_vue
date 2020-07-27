@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#app {
+    margin: 0 auto;
+}
+
+h1, h3 {
+    text-align: center;
+}
+h1 {
+    margin-top: 10vh;
+}
+
+#new-task-form {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   width: 50%;
+   height: 40vh;
+   margin: 0 auto;
+}
+
+.form-item {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#add-task-btn {
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+}
+
+#task-list {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-evenly;
+    margin: 10px;
+}
+
+#task-list > li {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+li > span {
+    padding: 8px;
+}
