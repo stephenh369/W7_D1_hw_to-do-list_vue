@@ -12,11 +12,18 @@
         <form v-on:submit.prevent="saveNewTask">
             <label for="new-task">New Task:</label>
             <input id="new-task" type="text" v-model="newTask">
+            <p>Priority:</p>
+            <input id="high" name="priority" type="radio" v-model="priority" value="High">
+            <label for="high">High</label>
+            <input id="med" name="priority" type="radio" v-model="priority" value="Med">
+            <label for="med">Medium</label>
+            <input id="low" name="priority" type="radio" v-model="priority" value="Low">
+            <label for="low">Low</label>
             <input type="submit" value="Add Task">
         </form>
         <ul>
             <li v-for="(task, index) in tasks">
-                <span>{{ task.name }}</span>
+                <span>{{ task.name }} {{ task.priority }}</span>
                 <button @click="deleteTask(index)">Delete</button>
             </li>
         </ul>

@@ -5,12 +5,14 @@ document.addEventListener('DOMContentLoaded', () => {
         el: "#app",
         data: {
             tasks: [],
-            newTask: ''
+            newTask: '',
+            priority: ''
         },
         methods: {
             saveNewTask: function() {
                 this.tasks.push({
                     name: this.newTask,
+                    priority: this.priority,
                     isComplete: false
                 });
                 this.newTask = '';
