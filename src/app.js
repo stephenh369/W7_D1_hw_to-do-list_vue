@@ -14,6 +14,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     isComplete: false
                 });
                 this.newTask = '';
+            },
+
+            deleteTask: function(index) {
+                this.tasks.splice(index, 1);
             }
         }
     });
