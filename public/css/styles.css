@@ -44,10 +44,24 @@ h1 {
 }
 
 #task-list > li {
+    width: fit-content;
+    text-align: center;
+    margin: auto;
     margin-top: 10px;
     margin-bottom: 10px;
+
 }
 
 li > span {
     padding: 8px;
+}
+
+li.not-complete {
+    border: 2px red solid;
+}
+li.complete {
+    border: 2px green solid;
+}
+li.complete > span {
+    text-decoration: line-through;
 }

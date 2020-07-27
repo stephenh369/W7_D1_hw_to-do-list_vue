@@ -20,6 +20,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
             deleteTask: function(index) {
                 this.tasks.splice(index, 1);
+            },
+
+            completeTask: function(index) {
+                this.tasks[index].isComplete = true
             }
         }
     });
