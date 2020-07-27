@@ -29,11 +29,6 @@ h1 {
     margin-right: 5px;
 }
 
-#add-task-btn {
-    padding: 5px;
-    border-radius: 5px;
-    border: none;
-}
 
 #task-list {
     display: flex;
@@ -61,7 +56,16 @@ li.not-complete {
 }
 li.complete {
     border: 2px green solid;
+    opacity: 0.5;
 }
 li.complete > span {
     text-decoration: line-through;
+}
+
+.btn {
+    padding: 0.5rem;
+    border: none;
+}
+.btn:hover {
+    background-color: #d3d3d3;
 }

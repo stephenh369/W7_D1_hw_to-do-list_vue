@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     isComplete: false
                 });
                 this.newTask = '';
+                this.priority = '';
             },
 
             deleteTask: function(index) {

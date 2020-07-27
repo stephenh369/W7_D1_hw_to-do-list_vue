@@ -16,19 +16,19 @@
             <p>Priority:</p>
             <input class="form-item" id="high" name="priority" type="radio" v-model="priority" value="High">
             <label class="form-item" for="high">High</label>
-            <input class="form-item" id="med" name="priority" type="radio" v-model="priority" value="Med">
-            <label class="form-item" for="med">Medium</label>
+            <input class="form-item" id="medium" name="priority" type="radio" v-model="priority" value="Medium">
+            <label class="form-item" for="medium">Medium</label>
             <input class="form-item" id="low" name="priority" type="radio" v-model="priority" value="Low">
             <label class="form-item" for="low">Low</label>
-            <input class="form-item" id="add-task-btn" type="submit" value="Add Task">
+            <input class="form-item btn" id="add-task-btn" type="submit" value="Add Task">
         </form>
         <ul id="task-list">
             <h3>Tasks:</h3>
             <li v-for="(task, index) in tasks" :class="task.isComplete ? 'complete' : 'not-complete'">
                 <span id="span-name">{{ task.name }}</span>
                 <span id="span-priority">{{ task.priority }}</span>
-                <button id="complete-task-btn" @click="completeTask(index)">Complete</button>
-                <button id="delete-task-btn" @click="deleteTask(index)">Delete</button>
+                <button class="btn" id="complete-task-btn" @click="completeTask(index)">Complete</button>
+                <button class="btn" id="delete-task-btn" @click="deleteTask(index)">Delete</button>
             </li>
         </ul>
 
